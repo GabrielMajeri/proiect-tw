@@ -1,12 +1,15 @@
-const http = require("http");
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8080;
 
-const server = http.createServer((req, res) => {
+const loggingMiddleware = (req, _, next) => {
     const { method, url } = req;
     const ipAddress = req.connection.remoteAddress;
     console.log(`${method} ${url} - ${ipAddress}`);
-    res.end("Hello world!");
-});
+    next();
+};
+app.use(loggingMiddleware);
 
-const port = process.env.PORT || 8080;
-console.log(`Starting Node.js HTTP server on port ${port}`);
-server.listen(port);
+app.get('/', (req, res) => res.send('Hello world!'));
+
+app.listen(port, () => console.log(`Express app listening on http://localhost:${port}`));
