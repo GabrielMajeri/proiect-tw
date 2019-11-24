@@ -1,31 +1,92 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Învață fizica în mod interactiv cu exemplele animate și exercițiile de pe Physikos"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <!-- Load KaTeX -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+      integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+      integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="/assets/scripts/render-math.js"></script>
 
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-    <script defer src="scripts/render-math.js"></script>
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <link rel="stylesheet" href="/assets/styles/home.css" />
 
-    <title>Physikos</title>
-</head>
-<body>
+    <script defer src="/assets/scripts/navbar.js"></script>
+    <link rel="stylesheet" href="/assets/styles/navbar.css" />
+
+    <title>Învață fizica ușor, online de la Physikos</title>
+  </head>
+  <body>
     <header>
-        <h1>Physikos - Fizica explicată pentru toți</h1>
-        <p>Pe acest site poți găsi animații, exerciții și cursuri interactive care te ajută să înveți fizică clasică.</p>
-    </header>
-    <section>
-        <h2>Legea a doua a mecanicii clasice</h2>
-        <p>Una dintre cele mai utile legi ale mecanici, pe baza căreia putem rezolva aproape orice exercițiu, este aceasta:</p>
-        <div class="math display-mode">F = m a</div>
-        <p>Această lege leagă trei concepte fundamentale între ele:</p>
+      <h1>Physikos</h1>
+      <h2>Un mod interactiv de a învăța fizică</h2>
+      <p>
+        Pe acest site poți găsi animații, exerciții și cursuri interactive care
+        te ajută să înveți fizică clasică.
+      </p>
+      <nav>
         <ul>
-            <li>Forța pe care o aplicăm asupra unui obiect, care este o măsură a tăriei interacțiunii</li>
-            <li>Masa obiectului, care este o măsură a inerției obiectului</li>
-            <li>Accelerația, care descrie ritmul de modificare a vitezei obiectului în timp</li>
+          <li><a href="/index.html">Pagina principală</a></li>
+          <li id="nav-courses">
+            <a href="#">Cursuri</a>
+            <ol>
+              <li><a href="/courses/mechanics.html">Mecanică</a></li>
+              <li><a href="/courses/kinematics.html">Cinematică</a></li>
+              <li><a href="/courses/optics.html">Optică</a></li>
+            </ol>
+          </li>
+          <li><a href="/exercises.html">Exerciții</a></li>
+          <li><a href="/about.html">Despre</a></li>
+          <li><a href="/contact.html">Contact</a></li>
         </ul>
-    </section>
-</body>
+      </nav>
+    </header>
+    <main>
+      <header>
+        <h1>Cele mai noi articole</h1>
+        <p>Aici puteți vedea cele mai recent actualizate postări de pe site.</p>
+      </header>
+      <article>
+        <h2>Legea lui Hooke</h2>
+        <p>
+          În acest articol vom descrie cum se comportă corpurile elastice, care
+          în condiții obișnuite respectă
+          <strong>legea lui Hooke</strong>.
+        </p>
+      </article>
+      <article>
+        <h2>Principiul conservării energiei mecanice</h2>
+        <p>
+          Un principiu foarte important din fizică este cel al conservării
+          energiei. Această lege ne spune că, în lipsa forțelor neconservative,
+          energia mecanică a unui corp rămâne constantă.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <strong>&copy; 2019 Gabriel Majeri</strong> &ndash;
+      <small
+        >Conținutul de pe acest site este pus la dispoziție sub
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
+          >Licenţa Creative Commons Atribuire - Distribuire în condiţii identice
+          4.0 Internațional</a
+        >.
+      </small>
+    </footer>
+  </body>
 </html>
