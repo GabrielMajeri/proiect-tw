@@ -1,0 +1,33 @@
+/** Styling for the site homepage */
+
+main {
+  margin: auto;
+  text-align: center;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+#coef-table {
+  overflow-x: scroll;
+  width: 100vw;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+table th {
+  color: white;
+  background-color: gray;
+}
+
+table td {
+  border: 1px solid black;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: lightgray;
+}

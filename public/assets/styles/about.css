@@ -1,0 +1,29 @@
+#carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #carousel figure {
+  }
+
+  #carousel img {
+    max-height: 500px;
+    width: auto;
+  }
+
+  @media all and (min-width: 800px) {
+    #carousel {
+      flex-flow: row wrap;
+    }
+
+    #carousel img {
+      max-height: 400px;
+    }
+
+  @media all and (min-width: 1200px) {
+    #carousel {
+      flex-direction: row;
+    }
+  }

@@ -8,58 +8,76 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Load KaTeX -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
-      integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
-      crossorigin="anonymous"
-    />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
-      integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
-      crossorigin="anonymous"
-    ></script>
-    <script defer src="/assets/scripts/render-math.js"></script>
+    <base href="/" />
 
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Page styles -->
     <link rel="stylesheet" href="/assets/styles/main.css" />
     <link rel="stylesheet" href="/assets/styles/home.css" />
 
-    <script defer src="/assets/scripts/navbar.js"></script>
+    <!-- Page Navbar -->
+    <script async src="/assets/scripts/navbar.js"></script>
     <link rel="stylesheet" href="/assets/styles/navbar.css" />
 
     <title>Învață fizica ușor, online de la Physikos</title>
   </head>
   <body>
-    <header>
+    <header id="page-header">
       <h1>Physikos</h1>
       <h2>Un mod interactiv de a învăța fizică</h2>
-      <p>
-        Pe acest site poți găsi animații, exerciții și cursuri interactive care
-        te ajută să înveți fizică clasică.
-      </p>
-      <nav>
-        <ul>
-          <li><a href="/index.html">Pagina principală</a></li>
-          <li id="nav-courses">
-            <a href="#">Cursuri</a>
-            <ol>
-              <li><a href="/courses/mechanics.html">Mecanică</a></li>
-              <li><a href="/courses/kinematics.html">Cinematică</a></li>
-              <li><a href="/courses/optics.html">Optică</a></li>
-            </ol>
-          </li>
-          <li><a href="/exercises.html">Exerciții</a></li>
-          <li><a href="/about.html">Despre</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="gear-container">
+        <img src="/assets/images/gear.webp" />
+      </div>
     </header>
+    <nav id="page-nav">
+      <ul>
+        <li><a href="/index.html">Pagina principală</a></li>
+        <li class="dropdown">
+          <a href="#">Cursuri</a>
+          <ul>
+            <li><a href="/courses.html#mechanics">Mecanică</a></li>
+            <li><a href="/courses.html#kinematics">Cinematică</a></li>
+            <li><a href="/courses.html#optics">Optică</a></li>
+          </ul>
+        </li>
+        <li><a href="/exercises.html">Exerciții</a></li>
+        <li><a href="/about.html">Despre</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
     <main>
+      <section>
+        <p>
+          Pe acest site poți găsi animații, exerciții și cursuri interactive
+          care te ajută să înveți
+          <abbr
+            title="Fizica obiectelor de dimensiuni asemănătoare oamenilor, excluzând mecanica relativistă sau fizica cuantică"
+            >fizică clasică</abbr
+          >.
+        </p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/DmIIwIP9Omk"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
       <header>
         <h1>Cele mai noi articole</h1>
-        <p>Aici puteți vedea cele mai recent actualizate postări de pe site.</p>
+        <p>
+          Aici puteți vedea cele mai recent actualizate materiale de pe site.
+        </p>
       </header>
       <article>
         <h2>Legea lui Hooke</h2>
@@ -68,6 +86,55 @@
           în condiții obișnuite respectă
           <strong>legea lui Hooke</strong>.
         </p>
+        <section id="coef-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipul materialului</th>
+                <th>Material</th>
+                <th>Punct de topire</th>
+                <th>Modulul de elasticitate</th>
+                <th>Densitate</th>
+                <th>Coeficientul de expansiune termică</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">Metal și aliaje</td>
+                <td>Fier</td>
+                <td>1538</td>
+                <td>207</td>
+                <td>7.87</td>
+                <td>11.8</td>
+              </tr>
+              <tr>
+                <td>Oțel inoxidabil</td>
+                <td>1385</td>
+                <td>193</td>
+                <td>8.00</td>
+                <td>16.0</td>
+              </tr>
+              <tr>
+                <td rowspan="2">Polimeri</td>
+                <td>Nylon</td>
+                <td>260</td>
+                <td>2</td>
+                <td>1.14</td>
+                <td>80</td>
+              </tr>
+              <tr>
+                <td>Poliester</td>
+                <td>255</td>
+                <td>3.0</td>
+                <td>1.35</td>
+                <td>65</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <footer>
+          <a href="#">Citește mai mult...</a>
+        </footer>
       </article>
       <article>
         <h2>Principiul conservării energiei mecanice</h2>
@@ -76,9 +143,12 @@
           energiei. Această lege ne spune că, în lipsa forțelor neconservative,
           energia mecanică a unui corp rămâne constantă.
         </p>
+        <footer>
+          <a href="#">Citește mai mult...</a>
+        </footer>
       </article>
     </main>
-    <footer>
+    <footer id="page-footer">
       <strong>&copy; 2019 Gabriel Majeri</strong> &ndash;
       <small
         >Conținutul de pe acest site este pus la dispoziție sub

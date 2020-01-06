@@ -1,0 +1,68 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+
+  min-width: 320px;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+#page-header h1 {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 6rem;
+  text-align: center;
+
+  color: black;
+  transition: color ease-in-out 2s, background-color ease-in-out 1s;
+}
+
+#page-header h1:hover {
+  color: white;
+  background-color: black;
+}
+
+#page-header h2 {
+  padding: 0 1rem;
+  text-align: center;
+}
+
+#page-header .gear-container {
+  text-align: center;
+}
+
+#page-header img {
+  max-width: 100px;
+  transform: rotate(30deg);
+  animation-name: rotate-gear;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate-gear {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#page-footer {
+  padding: 1rem 0.5rem;
+
+  background-color: rgb(245, 245, 245);
+  border-top: 1px solid gray;
+  box-shadow: 1px -2px 3px rgba(0, 0, 0, 0.12);
+}

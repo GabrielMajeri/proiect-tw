@@ -1,0 +1,28 @@
+{
+  "difficulty": "simple",
+  "exercises": [
+    {
+      "question": "O navă spațială inițial staționară se lovește ușor de un asteroid de dimensiunea unei mingi de baseball. Ce se întâmplă cu nava?",
+      "answers": [
+        "Rămâne pe loc, este prea masivă să fie deplasată de un asteroid atât de mic",
+        "Pornește în direcția opusă asteroidului, și continuă să meargă în acea direcție până întâlnește alt corp",
+        "Pornește în direcția opusă asteroidului, și după scurt timp se oprește"
+      ],
+      "correctAnswers": [1]
+    },
+    {
+      "question": "Un om împinge o masă de \\(5 \\text{ kg}\\) cu o forță de \\(16 \\text{ N}\\). În lipsa frecării și a oricărei alte interacțiuni, care este accelerația corpului?",
+      "answers": ["0.5 \\(\\frac{m}{s}\\)", "m/s", "m/s"]
+    },
+    {
+      "question": "De ce când stai pe un scaun nu cazi prin el (de obicei)?",
+      "answers": [
+        "Pentru că scaunul reacționează cu o forță normală, egală în modul și opusă apăsării tale",
+        "Pentru că scaunul reacționează cu o forță normală, mai mare în modul și opusă apăsării tale",
+        "Pentru că scaunul reacționează cu o forță normală, mai mică în modul și în sensul apăsării tale",
+        "Pentru că scaunul anulează forța de apăsare produsă de tine"
+      ],
+      "correctAnswers": [0]
+    }
+  ]
+}
