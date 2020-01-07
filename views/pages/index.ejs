@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="/assets/styles/main.css" />
     <link rel="stylesheet" href="/assets/styles/home.css" />
 
+    <script async src="/assets/scripts/common.js"></script>
+    <script async src="/assets/scripts/index.js"></script>
+
     <!-- Page Navbar -->
     <script async src="/assets/scripts/navbar.js"></script>
     <link rel="stylesheet" href="/assets/styles/navbar.css" />
@@ -148,15 +151,6 @@
         </footer>
       </article>
     </main>
-    <footer id="page-footer">
-      <strong>&copy; 2019 Gabriel Majeri</strong> &ndash;
-      <small
-        >Conținutul de pe acest site este pus la dispoziție sub
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
-          >Licenţa Creative Commons Atribuire - Distribuire în condiţii identice
-          4.0 Internațional</a
-        >.
-      </small>
-    </footer>
+    <%- include("../partials/footer") %>
   </body>
 </html>
