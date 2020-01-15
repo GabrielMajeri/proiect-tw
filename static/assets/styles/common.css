@@ -37,28 +37,6 @@ h2 {
   text-align: center;
 }
 
-#page-header .gear-container {
-  text-align: center;
-}
-
-#page-header img {
-  max-width: 100px;
-  transform: rotate(30deg);
-  animation-name: rotate-gear;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes rotate-gear {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
 #page-footer {
   padding: 1rem 0.5rem;
 

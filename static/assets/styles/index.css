@@ -32,3 +32,29 @@ table td {
 table tbody tr:nth-of-type(even) {
   background-color: lightgray;
 }
+
+#page-header .gear-container {
+  text-align: center;
+}
+
+#gear {
+  max-width: 100px;
+  transform: rotate(30deg);
+  animation-name: rotate-gear;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#gear.paused {
+  animation: none;
+}
+
+@keyframes rotate-gear {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

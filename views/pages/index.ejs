@@ -1,35 +1,11 @@
 <!DOCTYPE html>
 <html lang="ro">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="Învață fizica în mod interactiv cu exemplele animate și exercițiile de pe Physikos"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <%- include("../partials/head"); %>
 
-    <base href="/" />
-
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Page styles -->
-    <link rel="stylesheet" href="/assets/styles/main.css" />
-    <link rel="stylesheet" href="/assets/styles/home.css" />
-
-    <script async src="/assets/scripts/common.js"></script>
+    <!-- Homepage style / script -->
     <script async src="/assets/scripts/index.js"></script>
-
-    <!-- Page Navbar -->
-    <script async src="/assets/scripts/navbar.js"></script>
-    <link rel="stylesheet" href="/assets/styles/navbar.css" />
+    <link rel="stylesheet" href="/assets/styles/index.css" />
 
     <title>Învață fizica ușor, online de la Physikos</title>
   </head>
@@ -38,25 +14,10 @@
       <h1>Physikos</h1>
       <h2>Un mod interactiv de a învăța fizică</h2>
       <div class="gear-container">
-        <img src="/assets/images/gear.webp" />
+        <img id="gear" src="/assets/images/gear.webp" />
       </div>
     </header>
-    <nav id="page-nav">
-      <ul>
-        <li><a href="/index.html">Pagina principală</a></li>
-        <li class="dropdown">
-          <a href="#">Cursuri</a>
-          <ul>
-            <li><a href="/courses.html#mechanics">Mecanică</a></li>
-            <li><a href="/courses.html#kinematics">Cinematică</a></li>
-            <li><a href="/courses.html#optics">Optică</a></li>
-          </ul>
-        </li>
-        <li><a href="/exercises.html">Exerciții</a></li>
-        <li><a href="/about.html">Despre</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <%- include("../partials/navbar"); %>
     <main>
       <section>
         <p>

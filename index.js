@@ -4,12 +4,20 @@ const path = require("path");
 const app = express();
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-  res.render("pages/index");
-});
+const pages = {
+  "/": "index",
+  "/about": "about",
+  "/contact": "contact",
+  "/courses": "courses",
+  "/exercises": "exercises"
+};
 
-const publicDir = path.join(__dirname, "public");
-app.use(express.static(publicDir));
+for (let route in pages) {
+  app.get(route, (req, res) => res.render(`pages/${pages[route]}`));
+}
+
+const staticDir = path.join(__dirname, "static");
+app.use(express.static(staticDir));
 
 const port = process.env.PORT || 8080;
 app.listen(port, () =>
