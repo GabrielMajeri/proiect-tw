@@ -1,9 +1,58 @@
 <!DOCTYPE html>
 <html lang="ro">
   <head>
+    <%- include("../partials/head"); %>
+
     <title>Contactați-ne - Physikos</title>
   </head>
   <body>
     <%- include("../partials/navbar") %>
+
+    <main>
+      <form action="/send_feedback" method="GET">
+        <p>
+          Suntem mereu deschiși la părerile voastre! Vă rugăm să ne trimiteți
+          idei și sugestii despre cum am putea să ne îmbunătățim site-ul.
+        </p>
+        <div>
+          <label>Nume complet:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ion Popescu"
+            required
+          />
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            size="30"
+            placeholder="ion@example.com"
+            required
+          />
+        </div>
+        <div>
+          <p>Cât ți-a plăcut site-ul?</p>
+          <input type="radio" name="rating" value="1" />
+          <label>1</label>
+          <input type="radio" name="rating" value="2" />
+          <label>2</label>
+          <input type="radio" name="rating" value="3" />
+          <label>3</label>
+          <input type="radio" name="rating" value="4" />
+          <label>4</label>
+          <input type="radio" name="rating" value="5" />
+          <label>5</label>
+        </div>
+        <textarea name="feedback">Scrie-ne părerea ta</textarea>
+        <div>
+          <input type="submit" value="Trimite" />
+        </div>
+      </form>
+    </main>
   </body>
 </html>

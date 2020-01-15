@@ -2,6 +2,10 @@
 <html lang="ro">
   <head>
     <%- include("../partials/head"); %>
+
+    <script defer src="/assets/scripts/courses.js"></script>
+
+    <title>Cursuri</title>
   </head>
   <body>
     <%- include("../partials/navbar"); %>
@@ -60,9 +64,8 @@
         pe celălalt corp.
       </p>
     </section>
-    <!--
-      TODO: animation with Canvas API
-      https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
-    -->
+    <section>
+      <canvas id="parabola" width="800px" height="600px"></canvas>
+    </section>
   </body>
 </html>

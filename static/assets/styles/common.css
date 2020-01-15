@@ -44,3 +44,11 @@ h2 {
   border-top: 1px solid gray;
   box-shadow: 1px -2px 3px rgba(0, 0, 0, 0.12);
 }
+
+#ruler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transform-origin: 0% 0%;
+}

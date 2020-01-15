@@ -1,3 +1,4 @@
+const fs = require("fs");
 const express = require("express");
 const path = require("path");
 
@@ -15,6 +16,26 @@ const pages = {
 for (let route in pages) {
   app.get(route, (req, res) => res.render(`pages/${pages[route]}`));
 }
+
+app.get("/send_feedback", (req, res) => {
+  fs.open("feedback.txt", "a", (err, fd) => {
+    if (err) {
+      throw err;
+    }
+
+    fs.writeFile(
+      fd,
+      `Author: ${req.query.name} Rating: ${req.query.rating} Message: '${req.query.feedback}'\n`,
+      err => {
+        if (err) {
+          throw err;
+        }
+        console.log("Saved feedback");
+      }
+    );
+  });
+  res.send("S-a trimis feedbackul");
+});
 
 const staticDir = path.join(__dirname, "static");
 app.use(express.static(staticDir));
