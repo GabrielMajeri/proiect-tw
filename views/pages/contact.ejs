@@ -3,6 +3,10 @@
   <head>
     <%- include("../partials/head"); %>
 
+    <link rel="stylesheet" href="/assets/styles/contact.css" />
+
+    <script defer src="/assets/scripts/contact.js"></script>
+
     <title>Contactați-ne - Physikos</title>
   </head>
   <body>
@@ -35,8 +39,8 @@
             required
           />
         </div>
-        <div>
-          <p>Cât ți-a plăcut site-ul?</p>
+        <div id="rating-bar">
+          <p>Cât de mult ți-a plăcut site-ul?</p>
           <input type="radio" name="rating" value="1" />
           <label>1</label>
           <input type="radio" name="rating" value="2" />
@@ -48,7 +52,12 @@
           <input type="radio" name="rating" value="5" />
           <label>5</label>
         </div>
-        <textarea name="feedback">Scrie-ne părerea ta</textarea>
+        <textarea
+          rows="10"
+          cols="60"
+          placeholder="Scrie-ne părerea ta"
+          name="feedback"
+        ></textarea>
         <div>
           <input type="submit" value="Trimite" />
         </div>

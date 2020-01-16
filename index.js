@@ -13,9 +13,9 @@ const pages = {
   "/exercises": "exercises"
 };
 
-for (let route in pages) {
+pages.forEach(route => {
   app.get(route, (req, res) => res.render(`pages/${pages[route]}`));
-}
+});
 
 app.get("/send_feedback", (req, res) => {
   fs.open("feedback.txt", "a", (err, fd) => {
